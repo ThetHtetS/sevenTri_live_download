@@ -1,11 +1,11 @@
 steps:
   # Step 1: Build the Docker image
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/$PROJECT_ID/bkk-sixD-live-download', '.']
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/bkk-sixd-live-download', '.']
 
   # Step 2: Push the Docker image to Google Container Registry
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/$PROJECT_ID/bkk-sixD-live-download']
+    args: ['push', 'gcr.io/$PROJECT_ID/bkk-sixd-live-download']
 
   # Step 3: Deploy the image to Cloud Run
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
@@ -13,9 +13,9 @@ steps:
       - 'gcloud'
       - 'run'
       - 'deploy'
-      - 'bkk-sixD-live-download'
+      - 'bkk-sixd-live-download'
       - '--image'
-      - 'gcr.io/$PROJECT_ID/bkk-sixD-live-download'
+      - 'gcr.io/$PROJECT_ID/bkk-sixd-live-download'
       - '--platform'
       - 'managed'
       - '--region'
@@ -23,6 +23,6 @@ steps:
       - '--allow-unauthenticated'
 
 images:
-  - 'gcr.io/$PROJECT_ID/bkk-sixD-live-download'
+  - 'gcr.io/$PROJECT_ID/bkk-sixd-live-download'
 options:
   logging: CLOUD_LOGGING_ONLY
