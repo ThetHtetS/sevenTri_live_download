@@ -7,6 +7,7 @@ function App() {
   
 
     const handleDownload = () => {
+     
       const downloadUrl = "https://firebasestorage.googleapis.com/v0/b/seventri-fd94d.firebasestorage.app/o/application-ee7da1f8-1c68-4752-a26b-9ddfae72294f.apk?alt=media&token=7989d9df-c001-49e0-b420-8e1efebc441d";
   
       const link = document.createElement('a');
