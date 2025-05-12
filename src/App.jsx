@@ -32,7 +32,7 @@ const App = () => {
           />
           <h1 className="font-bold text-[#f9d51f] md:text-2xl text-1xl">BKK 6D</h1>
         </div>
-        <div className="flex lg:h-screen  lg:justify-evenly flex-col-reverse md:flex-col-reverse lg:flex-row items-center justify-center md:mt-20 lg:mt-0 ">
+        <div className="flex lg:h-screen bg-[url('./assets/bg.png')] bg-cover  lg:justify-evenly flex-col-reverse md:flex-col-reverse lg:flex-row items-center justify-center md:mt-20 lg:mt-0 ">
           <div className="text-primary lg:w-[35%] p-4 flex flex-col items-center justify-center md:items-center lg:items-start md:justify-center lg:justify-items-start me-10 md:me-0 md:mt-10 mt-5 lg:mt-0">
             <h1 className="font-bold md:text-2xl  ml-10 lg:leading-16 md:leading-16 leading-8 flex text-center lg:text-start  text-[#f9d51f] ">
               BKK 6D မှာ 2D 3D 6D resultတွေကိုကြည့်ရှုနိုင်ပါပြီ
@@ -40,12 +40,12 @@ const App = () => {
             <div className="ml-10 mt-7  md:mt-10 text-center lg:text-left mb-5 md:mb-0">
               <div
                 onClick={handleDownload}
-                className="w-[150px] h-[30px] font-bold text-lg bg-primary  bg-[#f9d51f] px-20 py-5 rounded flex items-center justify-center gap-3"
+                className="w-[150px] h-[30px] font-bold text-lg bg-primary  bg-[#f9d51f] px-20 py-5 rounded flex items-center justify-center gap-3 hover:border-4 hover:border-l-red-600 hover:border-t-red-600 hover:border-r-blue-600 hover:border-b-blue-600 hover:bg-[#f9d51f]  transition-all duration-700 ease-in-out cursor-pointer"
               >
-                Download{" "}
+                Download
                 <span>
                   <FaDownload />
-                </span>{" "}
+                </span>
               </div>
             </div>
           </div>
@@ -75,12 +75,12 @@ const App = () => {
             <img
               src={Two}
               alt=""
-              className="md:w-52 lg:w-52   w-32 lg:rounded-[30px] md:rounded-[30px] rounded-[20px]"
+              className="md:w-52 lg:w-52   w-32 lg:rounded-[30px] md:rounded-[30px] rounded-[20px] rotate-4"
             />
             <img
               src={One}
               alt=""
-              className="md:w-60 lg:w-60 w-36 lg:rounded-[36px] md:rounded-[36px] rounded-[24px]"
+              className="md:w-60 lg:w-60 w-36 lg:rounded-[36px] md:rounded-[36px] rounded-[24px] rotate-4"
             />
             {/* <img src={Onboarding} alt="" className='w-52' /> */}
           </div>
