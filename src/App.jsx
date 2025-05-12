@@ -7,6 +7,7 @@ import Two from "./assets/2.png";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
+
 const App = () => {
 
   const handleDownload = () => {
@@ -23,7 +24,7 @@ const App = () => {
 
   return (
     <>
-      <div className="bg-[#283A4A] lg:h-screen h-screen ">
+      <div className="bg-[url('./assets/bg.png')] bg-cover  h-screen">
         <div className="flex items-center lg:pl-20 md:pl-20 pl-10 gap-4 h-25 pt-5">
           <img
             src={Logo}
@@ -32,55 +33,33 @@ const App = () => {
           />
           <h1 className="font-bold text-[#f9d51f] md:text-2xl text-1xl">BKK 6D</h1>
         </div>
-        <div className="flex  lg:justify-evenly bg-[#283A4A] flex-col-reverse md:flex-col-reverse lg:flex-row items-center justify-center lg:-mt-25 md:mt-20 sm:mt-0 ">
-          <div className="text-primary lg:w-[35%]  p-4 flex flex-col items-center justify-center md:items-center lg:items-start md:justify-center lg:justify-items-start me-10 md:me-0 md:mt-10 mt-5 lg:mt-0">
+        <div className="flex lg:h-screen bg-[url('./assets/bg.png')] bg-cover  lg:justify-evenly flex-col-reverse md:flex-col-reverse lg:flex-row items-center justify-center md:mt-20 lg:-mt-25 ">
+          <div className="text-primary lg:w-[35%] p-4 flex flex-col items-center justify-center md:items-center lg:items-start md:justify-center lg:justify-items-start me-10 md:me-0 md:mt-10 mt-5 lg:mt-0">
             <h1 className="font-bold md:text-2xl  ml-10 lg:leading-16 md:leading-16 leading-8 flex text-center lg:text-start  text-[#f9d51f] ">
               BKK 6D မှာ 2D 3D 6D resultတွေကိုကြည့်ရှုနိုင်ပါပြီ
             </h1>
             <div className="ml-10 mt-7  md:mt-10 text-center lg:text-left mb-5 md:mb-0">
               <div
                 onClick={handleDownload}
-                className="w-[150px] h-[30px] font-bold text-lg bg-primary  bg-[#f9d51f] px-20 py-5 rounded flex items-center justify-center gap-3 cursor-pointer hover:bg-yellow-400"
+                className="w-[150px] h-[30px] font-bold text-lg bg-primary  bg-[#f9d51f] px-20 py-5 rounded flex items-center justify-center gap-3 hover:bg-amber-400 cursor-pointer"
               >
-                Download{" "}
+                Download
                 <span>
                   <FaDownload />
-                </span>{" "}
+                </span>
               </div>
             </div>
           </div>
-          {/* Carousel for mobile*/}
-          {/* <div className='block md:hidden w-64'>
-                    <Carousel
-                        showArrows={false}
-                        showStatus={false}
-                        showThumbs={false}
-                        swipeable={true}
-                        interval={3000}
-                        autoPlay
-                        infiniteLoop
-                        className='carousel-container'
-                    >
-                        <div>
-                            <img src={Two} alt="Home Logo" className='w-full object-cover' />
-                        </div>
-                        <div>
-                            <img src={One} alt="Onboarding" className='w-full object-cover' />
-                        </div>
-                        
-                    </Carousel>
-                </div> */}
-          {/* Tablet and PC */}
           <div className="flex lg:h-screen gap-2 justify-center items-center lg:flex-wrap md:flex-wrap mx-10 mt-10 md:mt-0">
             <img
               src={Two}
               alt=""
-              className="md:w-52 lg:w-52   w-32 lg:rounded-[30px] md:rounded-[30px] rounded-[20px]"
+              className="md:w-52 lg:w-52   w-32 lg:rounded-[30px] md:rounded-[30px] rounded-[20px] rotate-4"
             />
             <img
               src={One}
               alt=""
-              className="md:w-60 lg:w-60 w-36 lg:rounded-[36px] md:rounded-[36px] rounded-[24px]"
+              className="md:w-60 lg:w-60 w-36 lg:rounded-[36px] md:rounded-[36px] rounded-[24px] rotate-4"
             />
             {/* <img src={Onboarding} alt="" className='w-52' /> */}
           </div>

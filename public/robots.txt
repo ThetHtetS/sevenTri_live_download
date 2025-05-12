@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bkk-6d.com/sitemap.xml
