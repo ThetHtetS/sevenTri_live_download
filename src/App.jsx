@@ -6,7 +6,7 @@ import One from "./assets/1.png";
 import Two from "./assets/2.png";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Helmet } from "react-helmet";
+
 
 const App = () => {
 
@@ -24,23 +24,7 @@ const App = () => {
 
   return (
     <>
-<<<<<<< HEAD
       <div className="bg-[url('./assets/bg.png')] bg-cover  lg:h-auto h-screen">
-=======
-      <Helmet>
-        <title>BKK 6D</title>
-        <meta name="description" content="Official page to download BKK 6D for Android. Get the latest version now."/>
-        <meta name="keywords" content="BKK 6D, download BKK 6D, BKK 6D Android, BKK6D, BKK-6D" />
-        <link rel="canonical" href="https://bkk-6d.com/" />
-        
-        {/* Open Graph for link preview */}
-        <meta property="og:title" content="Download BKK 6D" />
-        <meta property="og:description" content="Official download link for BKK 6D. Get it now!" />
-        <meta property="og:url" content="https://bkk-6d.com/" />
-        <meta property="og:type" content="website" />
-      </Helmet>
-      <div className="bg-[#283A4A] lg:h-auto h-screen">
->>>>>>> 0d81ef7e93289c0110ae3229f6c36290ba03b207
         <div className="flex items-center lg:pl-20 md:pl-20 pl-10 gap-4 h-25 pt-5">
           <img
             src={Logo}
