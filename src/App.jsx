@@ -40,7 +40,7 @@ const App = () => {
             <div className="ml-10 mt-7  md:mt-10 text-center lg:text-left mb-5 md:mb-0">
               <div
                 onClick={handleDownload}
-                className="w-[150px] h-[30px] font-bold text-lg bg-primary  bg-[#f9d51f] px-20 py-5 rounded flex items-center justify-center gap-3 cursor-pointer"
+                className="w-[150px] h-[30px] font-bold text-lg bg-primary  bg-[#f9d51f] px-20 py-5 rounded flex items-center justify-center gap-3 cursor-pointer hover:bg-yellow-400"
               >
                 Download{" "}
                 <span>
