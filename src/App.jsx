@@ -1,11 +1,12 @@
-// export default App;
 import React from "react";
 import Logo from "./assets/icon.png";
-import { FaDownload } from "react-icons/fa";
-import One from "./assets/1.png";
-import Two from "./assets/2.png";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "./App.css";
+import Loader from "./components/Loader";
+import LoaderA from "./components/LoaderA";
+import LoaderB from "./components/LoaderB";
+import LoaderC from "./components/LoaderC";
+import front from "./assets/front.png";
+import back from "./assets/back.png";
 
 
 const App = () => {
@@ -24,47 +25,36 @@ const App = () => {
 
   return (
     <>
-      <div className="bg-[url('./assets/bg.png')] bg-cover  h-screen">
-        <div className="flex items-center lg:pl-20 md:pl-20 pl-10 gap-4 h-25 pt-5">
-          <img
-            src={Logo}
-            alt=""
-            className="lg:w-18 lg:h-18 md:w-18 md:h-18 w-12 h-12  rounded-full shadow-md shadow-amber-300"
-          />
+    <div className="bg-gradient-to-br from-[#4d4d4d] to-[#1a1a1a] h-screen w-full overflow-y-auto">
+        <div className="flex items-center lg:pl-20 md:pl-20 pl-10 gap-4 h-[15vh] pt-5 ">
+          <div className="mt-4">
+            <LoaderC />
+          </div>
           <h1 className="font-bold text-[#f9d51f] md:text-2xl text-1xl">BKK 6D</h1>
         </div>
-        <div className="flex lg:h-screen bg-[url('./assets/bg.png')] bg-cover  lg:justify-evenly flex-col-reverse md:flex-col-reverse lg:flex-row items-center justify-center md:mt-20 lg:-mt-25 ">
-          <div className="text-primary lg:w-[35%] p-4 flex flex-col items-center justify-center md:items-center lg:items-start md:justify-center lg:justify-items-start me-10 md:me-0 md:mt-10 mt-5 lg:mt-0">
-            <h1 className="font-bold md:text-2xl  ml-10 lg:leading-16 md:leading-16 leading-8 flex text-center lg:text-start  text-[#f9d51f] ">
-              BKK 6D မှာ 2D 3D 6D resultတွေကိုကြည့်ရှုနိုင်ပါပြီ
-            </h1>
-            <div className="ml-10 mt-7  md:mt-10 text-center lg:text-left mb-5 md:mb-0">
-              <div
+        <div className="flex flex-col md:flex-row justify-between h-screen md:h-[85vh] w-full overflow-hidden">
+          <div className="relative flex flex-col justify-center items-center h-full w-full">
+            <div className="-mt-40 flex flex-col gap-12 justify-center items-center">
+              <LoaderA />
+              <Loader />
+            </div>
+            <div className="absolute top-0 left-0 h-full w-full z-50">
+              <button
                 onClick={handleDownload}
-                className="w-[150px] h-[30px] font-bold text-lg bg-primary  bg-[#f9d51f] px-20 py-5 rounded flex items-center justify-center gap-3 hover:bg-amber-400 cursor-pointer"
+                className="absolute bottom-4 md:bottom-24 left-1/2 transform -translate-x-1/2 bg-[#D2A410] hover:bg-amber-600 hover:text-white text-[#1F2127] font-bold py-3 px-6 rounded-xl cursor-pointer hover:shadow-2xl transition duration-300 shadow-amber-500"
               >
-                Download
-                <span>
-                  <FaDownload />
-                </span>
-              </div>
+                Download Now
+              </button>
             </div>
           </div>
-          <div className="flex lg:h-screen gap-2 justify-center items-center lg:flex-wrap md:flex-wrap mx-10 mt-10 md:mt-0">
-            <img
-              src={Two}
-              alt=""
-              className="md:w-52 lg:w-52   w-32 lg:rounded-[30px] md:rounded-[30px] rounded-[20px] rotate-4"
-            />
-            <img
-              src={One}
-              alt=""
-              className="md:w-60 lg:w-60 w-36 lg:rounded-[36px] md:rounded-[36px] rounded-[24px] rotate-4"
-            />
-            {/* <img src={Onboarding} alt="" className='w-52' /> */}
+          <div className="flex justify-center items-center h-full w-full">
+            <div className="flex justify-center items-center h-[80%] w-[80%] relative">
+              <img src={back} alt="" className="absolute w-full h-full object-contain ml-32 -mt-6" />
+              <img src={front} alt="" className="absolute w-full h-full object-contain -ml-32 mt-6 z-10"/>
+            </div>
           </div>
         </div>
-      </div>
+    </div>
     </>
   );
 };
